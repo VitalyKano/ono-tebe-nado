@@ -10,12 +10,9 @@
     gap: 30px;
     justify-content: space-between;
     margin-left: 28px;
-    
-
 }
 
  .header__link-list-item {
-
     list-style: circle;
     color: #000;
     font-family: Raleway;
@@ -35,7 +32,10 @@
     font-family: Raleway;
     font-size: 18px;
     font-weight: 400;
+}
 
+.header__link-list-item-main {
+    text-decoration: none;
 }
 
 .header__logo {
@@ -54,7 +54,6 @@
     line-height: 24.3px;
     letter-spacing: 0.18px;
     margin-right: 60px;
-    
 }
 
 .adress__text {
@@ -65,6 +64,12 @@
     font-weight: 400;
     line-height: 24.3px;
 }
+
+.address__link {
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+}
+
 
 .cover__title {
     position: absolute;
@@ -371,6 +376,10 @@
 
 }
 
+.footer__menu_active {
+    text-decoration: none;
+}
+
 .footer__menu-list {
     list-style-type: none;
     display: flex;
@@ -382,10 +391,6 @@
     font-size: 18px;
     font-weight: 400;
     margin-left: 36px;
-}
-
-.footer__menu {
-    text-decoration: none;
 }
 
 .footer__menu_link {
