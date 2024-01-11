@@ -1,8 +1,9 @@
 body {
-    font-family: "Raleway" "Arial", "Helvetica", sans-serif;
+    font-family: "Raleway", "Arial", "Helvetica", sans-serif;
     font-weight: normal;
     font-weight: bold;
 }
+
 .header {
     display: flex;
     justify-content: space-between;
