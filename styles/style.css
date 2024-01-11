@@ -70,9 +70,7 @@
     border-bottom: 1px solid currentColor;
 }
 
-
 .cover__title {
-    position: absolute;
     color: #FFF;
     font-family: Raleway;
     font-size: 100px;
@@ -81,7 +79,9 @@
     height: 100%;
     width: 100%;
     letter-spacing: 30px;
-    padding: 165px 50px 237px;
+    padding: 0px 0px 135px;
+    z-index: 1;
+    position: relative;
 }
 
 .cover-span {
@@ -89,13 +89,11 @@
 }
 
 .cover__description {
-    z-index: 2;
-    position: absolute;
+    position: relative;
+    z-index: 1;
     justify-content: space-between;
     display: flex;
     align-items: center;
-    padding: 0px 50px 51px 78px;
-    bottom: 0;
     width: 100%;
 }
 
@@ -125,7 +123,6 @@
 
 .letter-spacing-extended {
     letter-spacing: 60px;
-
 }
 
 .aligned-text {
@@ -160,17 +157,18 @@
     opacity: 0.6;
     width: 100%;
     height: 100%;
+    inset: 0;
+    z-index: 0;
 }
 
 .cover {
     position: relative;
-    min-height: 757px;
     background-image: url(../images/cover.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 125% auto;
+    background-size: cover;
+    padding: 165px 50px 50px 50px;
 }
-
 
 .lots {
     padding: 179px 0px 146px;
@@ -179,28 +177,34 @@
 .lots__card-list {
     list-style: none;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     gap: 25px;
-    width: 100%;
     padding: 0px 0px 0px 24px;
+    flex-grow: 1;
+}
+
+.lots__card-list-item {
+    width: 334px;
+    height: 563px;
+    flex-grow: 1;
 }
 
 .card-link {
-    display: block;
-    width: 100%;
     text-decoration: none;
 }
 
-
 .card {
-    width: 334px;
-    height: 563px;
     background-color: #000;
     position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .card__title {
@@ -235,25 +239,17 @@
     text-transform: uppercase;
     padding: 0px 0px 27px 64px;
 }
+
 .card_type_film {
     background-image: url(../images/card-lot-01.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 161% auto;
 }
 
 .card_type_book {
     background-image: url(../images/card-lot-02.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 161% auto;
 }
 
 .card_type_picture {
     background-image: url(../images/card-lot-03.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 161% auto;
 }
 
 .lots__look-more-link {
@@ -264,8 +260,7 @@
     font-family: Raleway;
     font-size: 20px;
     font-weight: 400;
-    padding: 30px 0 0;
-    margin-left: 64px;
+    margin: 30px 0 0 64px;
 }
 
 
@@ -275,7 +270,6 @@
 
 .about__column {
      grid-template-columns: 344px 1fr;
-     grid-template-rows: 2fr;
      display: grid;
 
 }
@@ -287,8 +281,13 @@
     border-radius: 50%;
     position: relative;
     place-self: center;
+    margin: auto;
+    display: flex;
 }
 
+.about__description {
+    display: grid;
+}
 .about__title { 
     color: #000;
     font-family: Raleway;
@@ -302,7 +301,14 @@
     padding-left: 16px;
 }
 
-.about__text {
+.card__text {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.text {
+    gap: 24px;
     color: #000;
     font-family: Raleway;
     font-size: 20px;
@@ -310,49 +316,12 @@
     letter-spacing: 0.2px;
     display: grid;
     grid-column-start: 2;
-    margin-top: 8px;
     padding-left: 16px;
-}
-
-.about__text-letter-spacing-extended-first {
-    letter-spacing: 0px;
-}
-
-.about__text-letter-spacing-extended-second {
-    letter-spacing: 0.4px;
-}
-
-.about__text-letter-spacing-extended-third {
-    letter-spacing: -0.2px;
-}
-
-.about__text-letter-spacing-extended-fourth {
-    letter-spacing: 0.6px;
-}
-
-.about__text_second {
-    color: #000;
-    font-family: Raleway;
-    font-size: 20px;
-    font-weight: 400;
-    display: grid;
-    grid-column-start: 2;
-    margin-top: 24px;
-    padding-left: 16px
-}
-
-.about__text-second-letter-spacing-extended-first {
-    letter-spacing: 0.8px;
-}
-
-.about__text-second-letter-spacing-extended-second {
-    letter-spacing: 0.2px;    
 }
 
 .about__logo-image {
     width: 148px;
     height: 114px;
-    position: absolute;
     inset: 0;
     margin: auto;
 }
