@@ -1,1 +1,1 @@
-git@github.com:VitalyKano/ono-tebe-nado.git
+https://github.com/VitalyKano/ono-tebe-nado.git
